@@ -48,6 +48,6 @@
   <input type="password" class="form-control" id="inputConfPassword"><br><br>
   </div>
 
-  <button type="submit" class="btn btn-primary" onclick="onSubmit">Sign in</button>
+  <button type="submit" class="btn btn-primary" [disabled]="utilisateurForm.invalid">Sign in</button>
 </form>
 </body>

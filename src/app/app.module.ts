@@ -7,7 +7,6 @@ import { HelloComponent } from './hello.component';
 import { FormComponent } from './form/form.component';
 import { TeteComponent } from './tete/tete.component';
 import { FooterComponent } from './footer/footer.component';
-import { RecapComponent } from './recap/recap.component';
 import { UtilisateurService } from './services/utilisateur-service.service';
 import { RouterModule, Routes } from '@angular/router';
 import { UtilisateurListComponent } from './utilisateur-list/utilisateur-list.component';
@@ -24,8 +23,8 @@ const appRoutes: Routes = [
 
 
 @NgModule({
-  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(appRoutes)],
-  declarations: [ AppComponent, HelloComponent, FormComponent, TeteComponent, FooterComponent, RecapComponent, UtilisateurListComponent, PhoneNumberPipe ],
+  imports:      [ BrowserModule, FormsModule, ReactiveFormsModule, RouterModule.forRoot(appRoutes) ],
+  declarations: [ AppComponent, HelloComponent, FormComponent, TeteComponent, FooterComponent, UtilisateurListComponent, PhoneNumberPipe ],
   bootstrap:    [ AppComponent ],
   providers: [UtilisateurService]
 })

@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormGroup, Validators } from '@angular/forms';
+import { FormBuilder, FormControl,  FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Utilisateur } from '../models/utilisateur.model';
 import { UtilisateurService } from '../services/utilisateur-service.service';
@@ -11,7 +11,7 @@ import { UtilisateurService } from '../services/utilisateur-service.service';
 })
 export class FormComponent implements OnInit {
 
-  utilisateurForm : FormGroup;
+  utilisateurForm : FormGroup ;
 
   constructor(private formBuilder: FormBuilder, private utilisateurService: UtilisateurService, private router: Router){}
 
@@ -21,19 +21,18 @@ export class FormComponent implements OnInit {
 
   initForm()
   {
-    this.utilisateurForm
- = this.formBuilder.group({
-      nom: ['', Validators.required],
-      prenom: ['', Validators.required],
-      adresse: ['', Validators.required],
-      codePostal: ['', Validators.required],
-      ville: ['', Validators.required],
-      telephone: ['', Validators.required],
-      mail: ['', [Validators.required, Validators.email]],
-      civilite: ['', Validators.required],
-      login: ['', Validators.required],
-      password: ['', Validators.required],
-      password2: ['', Validators.required]
+    this.utilisateurForm =new FormGroup ({
+      nom: new FormControl('', Validators.required),
+      prenom: new FormControl('', Validators.required),
+      adresse: new FormControl('', Validators.required),
+      codePostal: new FormControl('', Validators.required),
+      ville: new FormControl('', Validators.required),
+      telephone: new FormControl('', Validators.required),
+      mail: new FormControl('', Validators.required),
+      civilite: new FormControl('', Validators.required),
+      login: new FormControl('', Validators.required),
+      password: new FormControl('', Validators.required),
+      password2: new FormControl('', Validators.required)
     });
   }
 
