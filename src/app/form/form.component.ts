@@ -1,5 +1,5 @@
 import { Component, OnInit } from '@angular/core';
-import { FormBuilder, FormControl,  FormGroup, Validators } from '@angular/forms';
+import { FormControl,  FormGroup, Validators } from '@angular/forms';
 import { Router } from '@angular/router';
 import { Utilisateur } from '../models/utilisateur.model';
 import { UtilisateurService } from '../services/utilisateur-service.service';
@@ -13,7 +13,7 @@ export class FormComponent implements OnInit {
 
   utilisateurForm : FormGroup ;
 
-  constructor(private formBuilder: FormBuilder, private utilisateurService: UtilisateurService, private router: Router){}
+  constructor(private utilisateurService: UtilisateurService, private router: Router){}
 
   ngOnInit() {
     this.initForm();

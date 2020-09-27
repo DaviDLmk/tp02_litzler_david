@@ -1,6 +1,6 @@
 
 <body  id="page" >
-  <form name="form1"  [FormGroup]="utilisateurForm" (ngSubmit)='onSubmitForm()'>
+  <form [FormGroup]="utilisateurForm"  (ngSubmit)='onSubmitForm()'>
     <br> 
   <div class="form-row">
   <div class="form-group col-md-6">
@@ -9,7 +9,7 @@
   </div>
   <div class="form-group col-md-6">
     <label for="inputPrenom">Prénom :  </label>
-    <input type="password" class="form-control" id="inputPrenom"><br><br>
+    <input type="text" class="form-control" id="inputPrenom"><br><br>
   </div>
   </div>
 
@@ -48,6 +48,6 @@
   <input type="password" class="form-control" id="inputConfPassword"><br><br>
   </div>
 
-  <button type="submit" class="btn btn-primary" [disabled]="utilisateurForm.invalid">Sign in</button>
+  <button type="submit" class="btn btn-primary" >Sign in</button>
 </form>
 </body>
